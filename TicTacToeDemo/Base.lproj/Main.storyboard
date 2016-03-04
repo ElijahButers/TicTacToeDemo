@@ -209,6 +209,19 @@
                             <constraint firstItem="PqZ-sO-WgH" firstAttribute="centerY" secondItem="8eI-6B-5LL" secondAttribute="centerY" id="zBF-VO-hWj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="qfu-Zh-YNC" id="M4i-j1-6aB"/>
+                        <outlet property="button2" destination="98t-uy-0rT" id="P4Z-we-zxg"/>
+                        <outlet property="button3" destination="62d-F4-GSH" id="JcP-AQ-SU1"/>
+                        <outlet property="button4" destination="HMb-dL-Vh6" id="tfR-c4-Uh9"/>
+                        <outlet property="button5" destination="8eI-6B-5LL" id="4EI-hb-ets"/>
+                        <outlet property="button6" destination="PqZ-sO-WgH" id="rMh-sl-eVV"/>
+                        <outlet property="button7" destination="jO9-ry-D0q" id="Nsv-Ed-F58"/>
+                        <outlet property="button8" destination="brC-O5-9Ph" id="X0w-BV-m5q"/>
+                        <outlet property="button9" destination="ffX-sk-Nzn" id="LOD-zE-cNr"/>
+                        <outlet property="newGameButton" destination="Nxk-cX-CT3" id="ob7-Om-BXS"/>
+                        <outlet property="statusLabel" destination="yuy-dX-fVZ" id="46d-9R-JdB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
