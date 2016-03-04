@@ -64,6 +64,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(sender: AnyObject) {
+        
+        if playerTwoMoves.contains(sender.tag) || playerOneMoves.contains(sender.tag) {
+            statusLabel.text = "Square already used!"
+        } else {
+            if playerTurn % 2 != 0 {
+                //Add button to player move list
+                playerOneMoves.insert(sender.tag)
+                sender.setTitle("O", forState: .Normal)
+                statusLabel.text = "Player 2's turn!"
+            }
+        }
     }
     
 
