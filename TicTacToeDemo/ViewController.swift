@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     // Properties
     
     let winningCombinations = [[1, 2, 3,], [4, 5, 6], [7, 8, 9],[1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
-    let playerOneMoves = Set<Int>()
-    let playerTwoMoves = Set<Int>()
+    var playerOneMoves = Set<Int>()
+    var playerTwoMoves = Set<Int>()
     var playerTurn = 1
     
 
@@ -39,6 +39,12 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func newGame() {
+        
+        playerOneMoves.removeAll()
+        playerTwoMoves.removeAll()
     }
     
     // Actions
