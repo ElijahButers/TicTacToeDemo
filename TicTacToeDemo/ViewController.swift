@@ -45,11 +45,15 @@ class ViewController: UIViewController {
         
         playerOneMoves.removeAll()
         playerTwoMoves.removeAll()
+        
+        statusLabel.text = "Player 1's turn!"
     }
     
     // Actions
     
     @IBAction func newGameButtonClicked(sender: AnyObject) {
+        
+        
     }
     
     @IBAction func buttonClicked(sender: AnyObject) {
