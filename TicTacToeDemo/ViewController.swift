@@ -47,6 +47,13 @@ class ViewController: UIViewController {
         playerTwoMoves.removeAll()
         
         statusLabel.text = "Player 1's turn!"
+        
+        // Setup tiles
+        for index in 1...9 {
+            let tile = self.view.viewWithTag(index) as! UIButton
+            tile.enabled = true
+            tile.setTitle("", forState: .Normal)
+        }
     }
     
     // Actions
