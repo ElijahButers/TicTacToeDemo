@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     
     @IBAction func newGameButtonClicked(sender: AnyObject) {
         
-        
+        newGame()
     }
     
     @IBAction func buttonClicked(sender: AnyObject) {
