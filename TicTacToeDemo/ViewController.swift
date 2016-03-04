@@ -84,6 +84,11 @@ class ViewController: UIViewController {
         return winner
     }
     
+    func playDefence() -> Int {
+        
+        
+    }
+    
     // Actions
     
     @IBAction func newGameButtonClicked(sender: AnyObject) {
