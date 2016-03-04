@@ -58,7 +58,14 @@ class ViewController: UIViewController {
     
     func isWinner(player: Int) -> Int {
         
-        
+        var winner = 0
+        var moveList = Set<Int>()
+        // Make sure we're looking at right moves
+        if player == 1 {
+            moveList = playerOneMoves
+        } else {
+            moveList = playerTwoMoves
+        }
     }
     
     // Actions
