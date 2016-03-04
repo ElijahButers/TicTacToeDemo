@@ -66,6 +66,22 @@ class ViewController: UIViewController {
         } else {
             moveList = playerTwoMoves
         }
+        
+        //Check and see if there any winning combinations
+        
+        for combo in winningCombinations {
+            if moveList.contains(combo[0]) && moveList.contains(combo[1]) && moveList.contains(combo[2]) && moveList.count >= 3{
+                
+                winner = player
+                statusLabel.text = "Player \(player) has won the game!"
+                for index in 1...9 {
+                    let tile = self.view.viewWithTag(index) as! UIButton
+                    tile.enabled = false
+                }
+            }
+        }
+        
+        return winner
     }
     
     // Actions
