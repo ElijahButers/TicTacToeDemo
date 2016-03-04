@@ -101,6 +101,9 @@ class ViewController: UIViewController {
                 playerOneMoves.insert(sender.tag)
                 sender.setTitle("O", forState: .Normal)
                 statusLabel.text = "Player 2's turn!"
+                if isWinner(1) == 0 {
+                    
+                }
             }
         }
     }
