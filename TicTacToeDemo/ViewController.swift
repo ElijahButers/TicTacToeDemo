@@ -133,7 +133,16 @@ class ViewController: UIViewController {
             }
         }
         
-        
+        // If no possible wins or loses pick an empty spot
+        if possibleMove.count > 0 {
+            
+            return possibleMove[Int(arc4random_uniform(UInt32(possibleMove.count)))]
+        } else {
+            if spacesLeft.count > 0 {
+                
+                return spacesLeft[spacesLeft.startIndex.advancedBy(Int(UInt32(spacesLeft.count)))]
+            }
+        }
     }
     
     // Actions
