@@ -90,6 +90,10 @@ class ViewController: UIViewController {
         
         var possibleLosses = Array<Array<Int>>()
         var possibleWins = Array<Array<Int>>()
+        
+        //Determine what spaces are open
+        var spacesLeft = allSpaces.subtract(playerOneMoves.union(playerTwoMoves))
+        
         for combo in winningCombinations {
             var count = 0
             for play in combo {
