@@ -88,7 +88,7 @@ class ViewController: UIViewController {
     
     func playDefence() -> Int {
         
-        var possibleLosses = Array<Array<Int>>()
+        var possibleLoses = Array<Array<Int>>()
         var possibleWins = Array<Array<Int>>()
         
         //Determine what spaces are open
@@ -108,7 +108,7 @@ class ViewController: UIViewController {
                 
                 if count == 2{
                     
-                    possibleLosses.append(combo)
+                    possibleLoses.append(combo)
                     count = 0
                 }
                 
@@ -121,8 +121,8 @@ class ViewController: UIViewController {
         }
         
         // If finds any possible winning moves add them to possible moves set
-        if possibleLosses.count > 0 {
-            for combo in possibleLosses {
+        if possibleLoses.count > 0 {
+            for combo in possibleLoses {
                 for space in combo {
                     if playerOneMoves.contains(space) || playerTwoMoves.contains(space) {
                         
@@ -143,6 +143,12 @@ class ViewController: UIViewController {
                 return spacesLeft[spacesLeft.startIndex.advancedBy(Int(UInt32(spacesLeft.count)))]
             }
         }
+        
+        possibleMove.removeAll(keepCapacity: false)
+        possibleLoses.removeAll(keepCapacity: false)
+        possibleWins.removeAll(keepCapacity: false)
+        
+        playerTurn ++
     }
     
     // Actions
