@@ -86,6 +86,33 @@ class ViewController: UIViewController {
     
     func playDefence() -> Int {
         
+        var possibleLosses = Array<Array<Int>>()
+        var possibleWins = Array<Array<Int>>()
+        for combo in winningCombinations {
+            var count = 0
+            for play in combo {
+                
+                if playerOneMoves.contains(play) {
+                    count++
+                }
+                
+                if playerTwoMoves.contains(play) {
+                    count--
+                }
+                
+                if count == 2{
+                    
+                    possibleLosses.append(combo)
+                    count = 0
+                }
+                
+                if count == -2 {
+                    
+                    possibleWins.append(combo)
+                    count = 0
+                }
+            }
+        }
         
     }
     
