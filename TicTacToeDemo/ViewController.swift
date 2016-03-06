@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     var playerOneMoves = Set<Int>()
     var playerTwoMoves = Set<Int>()
     var playerTurn = 1
+    var nextMove = 1
     var allSpaces:Set<Int> = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var possibleMove = Array<Int>()
     
@@ -149,6 +150,7 @@ class ViewController: UIViewController {
         possibleWins.removeAll(keepCapacity: false)
         
         playerTurn ++
+        
     }
     
     // Actions
