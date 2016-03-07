@@ -122,6 +122,19 @@ class ViewController: UIViewController {
         }
         
         // If finds any possible winning moves add them to possible moves set
+        if possibleWins.count > 0 {
+            for combo in possibleWins {
+                for space in combo {
+                    if playerTwoMoves.contains(space) || playerOneMoves.contains(space) {
+                        
+                    } else {
+                        return space
+                    }
+                }
+            }
+        }
+        
+        // If finds any possible lossing moves add them to possible moves set
         if possibleLoses.count > 0 {
             for combo in possibleLoses {
                 for space in combo {
