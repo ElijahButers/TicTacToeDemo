@@ -188,6 +188,16 @@ class ViewController: UIViewController {
                 statusLabel.text = "Player 2's turn!"
                 if isWinner(1) == 0 {
                     
+                    // If no winner play defense
+                    let nextMove = playDefence()
+                    playerTwoMoves.insert(nextMove)
+                    let tmpButton = self.view.viewWithTag(nextMove) as! UIButton!
+                    tmpButton.setTitle("X", forState: .Normal)
+                    statusLabel.text = "Player 1's turn!"
+                    
+                    //Check and see if computer won
+                    isWinner(2)
+                    
                 }
             }
         }
