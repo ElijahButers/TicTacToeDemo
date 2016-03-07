@@ -200,6 +200,17 @@ class ViewController: UIViewController {
                     
                 }
             }
+            
+            // If all 9 turns used up and no winner call draw
+            
+            playerTurn++
+            if playerTurn > 9 && isWinner(1) < 1 {
+                statusLabel.text = "Draw Game"
+                for index in 1...9 {
+                    let tile = self.view.viewWithTag(index) as! UIButton
+                    tile.enabled = false
+                }
+            }
         }
     }
     
