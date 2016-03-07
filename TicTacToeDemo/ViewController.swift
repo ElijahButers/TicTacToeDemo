@@ -46,8 +46,8 @@ class ViewController: UIViewController {
     
     func newGame() {
         
-        playerOneMoves.removeAll()
-        playerTwoMoves.removeAll()
+        playerOneMoves.removeAll(keepCapacity: false)
+        playerTwoMoves.removeAll(keepCapacity: false)
         
         statusLabel.text = "Player 1's turn!"
         
