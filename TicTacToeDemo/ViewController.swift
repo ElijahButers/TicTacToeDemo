@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         var possibleWins = Array<Array<Int>>()
         
         //Determine what spaces are open
-        var spacesLeft = allSpaces.subtract(playerOneMoves.union(playerTwoMoves))
+        let spacesLeft = allSpaces.subtract(playerOneMoves.union(playerTwoMoves))
         
         for combo in winningCombinations {
             var count = 0
@@ -162,8 +162,9 @@ class ViewController: UIViewController {
         possibleLoses.removeAll(keepCapacity: false)
         possibleWins.removeAll(keepCapacity: false)
         
-        playerTurn ++
+        playerTurn++
         
+        return nextMove
     }
     
     // Actions
