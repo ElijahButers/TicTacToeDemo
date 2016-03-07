@@ -57,6 +57,8 @@ class ViewController: UIViewController {
             tile.enabled = true
             tile.setTitle("", forState: .Normal)
         }
+        statusLabel.text = "Player 1's turn"
+        playerTurn = 1
     }
     
     func isWinner(player: Int) -> Int {
